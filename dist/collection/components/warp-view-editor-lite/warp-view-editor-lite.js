@@ -135,12 +135,6 @@ export class WarpViewEditorLite {
             };
             edOpts.value = edOpts.value.trim();
             this.ed = monaco.editor.create(this.el.querySelector('#editor-' + this.edUid), edOpts);
-            if (this.ed) {
-                this.ed.getModel().onDidChangeContent((event) => {
-                    console.debug('[WarpViewEditorLite] - componentDidLoad - ws changed', event);
-                    this.warpViewEditorWarpscriptChanged.emit(this.ed.getValue());
-                });
-            }
             let layout = this.el.querySelector('#layout-' + this.edUid);
             let editor = this.el.querySelector('#editor-' + this.edUid);
             layout.style.width = !!this.widthPx ? this.widthPx.toString() + "px" : "100%";
@@ -211,12 +205,6 @@ export class WarpViewEditorLite {
         }
     }; }
     static get events() { return [{
-            "name": "warpViewEditorWarpscriptChanged",
-            "method": "warpViewEditorWarpscriptChanged",
-            "bubbles": true,
-            "cancelable": true,
-            "composed": true
-        }, {
             "name": "warpViewEditorLoaded",
             "method": "warpViewEditorLoaded",
             "bubbles": true,

@@ -8,7 +8,6 @@ export declare class WarpViewEditorLite {
     widthPx: number;
     heightLine: number;
     heightPx: number;
-    warpViewEditorWarpscriptChanged: EventEmitter;
     warpViewEditorLoaded: EventEmitter;
     loading: boolean;
     private WARPSCRIPT_LANGUAGE;

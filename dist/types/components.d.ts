@@ -63,7 +63,6 @@ declare global {
       'heightLine'?: number;
       'heightPx'?: number;
       'onWarpViewEditorLoaded'?: (event: CustomEvent) => void;
-      'onWarpViewEditorWarpscriptChanged'?: (event: CustomEvent) => void;
       'theme'?: string;
       'warpscript'?: string;
       'widthPx'?: number;

@@ -62,9 +62,6 @@
       "events": [
         {
           "event": "warpViewEditorLoaded"
-        },
-        {
-          "event": "warpViewEditorWarpscriptChanged"
         }
       ]
     }

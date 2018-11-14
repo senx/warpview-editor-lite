@@ -25,7 +25,6 @@ export class WarpViewEditorLite {
     @Prop() heightLine: number;
     @Prop() heightPx: number;
 
-    @Event() warpViewEditorWarpscriptChanged: EventEmitter;
     @Event() warpViewEditorLoaded: EventEmitter;
 
     @State() loading = false;
@@ -167,12 +166,6 @@ export class WarpViewEditorLite {
             };
             edOpts.value = edOpts.value.trim();
             this.ed = monaco.editor.create(this.el.querySelector('#editor-' + this.edUid), edOpts);
-            if (this.ed) {
-                this.ed.getModel().onDidChangeContent((event) => {
-                    console.debug('[WarpViewEditorLite] - componentDidLoad - ws changed', event);
-                    this.warpViewEditorWarpscriptChanged.emit(this.ed.getValue());
-                });
-            }
             let layout = this.el.querySelector('#layout-' + this.edUid)  as HTMLStencilElement;
             let editor = this.el.querySelector('#editor-' + this.edUid) as HTMLStencilElement;
             layout.style.width = !!this.widthPx ? this.widthPx.toString() + "px" : "100%";
