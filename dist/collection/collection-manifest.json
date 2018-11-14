@@ -1,0 +1,90 @@
+{
+  "components": [
+    {
+      "tag": "warp-view-editor-lite",
+      "dependencies": [],
+      "componentClass": "WarpViewEditorLite",
+      "componentPath": "components/warp-view-editor-lite/warp-view-editor-lite.js",
+      "styles": {
+        "$": {
+          "stylePaths": [
+            "../node_modules/monaco-editor/min/vs/editor/editor.main.css",
+            "components/warp-view-editor-lite/warp-view-editor-lite.scss"
+          ]
+        }
+      },
+      "props": [
+        {
+          "name": "config",
+          "type": "Any",
+          "attr": "config"
+        },
+        {
+          "name": "heightLine",
+          "type": "Number",
+          "attr": "height-line"
+        },
+        {
+          "name": "heightPx",
+          "type": "Number",
+          "attr": "height-px"
+        },
+        {
+          "name": "theme",
+          "type": "String",
+          "attr": "theme",
+          "watch": [
+            "themeHandler"
+          ]
+        },
+        {
+          "name": "warpscript",
+          "type": "String",
+          "attr": "warpscript",
+          "watch": [
+            "warpscriptHandler"
+          ]
+        },
+        {
+          "name": "widthPx",
+          "type": "Number",
+          "attr": "width-px"
+        }
+      ],
+      "states": [
+        {
+          "name": "loading"
+        }
+      ],
+      "hostElement": {
+        "name": "el"
+      },
+      "events": [
+        {
+          "event": "warpViewEditorLoaded"
+        },
+        {
+          "event": "warpViewEditorWarpscriptChanged"
+        }
+      ]
+    }
+  ],
+  "collections": [
+    {
+      "name": "@code-dimension/stencil-components",
+      "tags": [
+        "stc-chip",
+        "stc-tab-content",
+        "stc-tab-header",
+        "stc-tabs",
+        "stc-tags"
+      ]
+    }
+  ],
+  "compiler": {
+    "name": "@stencil/core",
+    "version": "0.8.2",
+    "typescriptVersion": "2.9.2"
+  },
+  "bundles": []
+}
