@@ -139,7 +139,7 @@ export class WarpViewEditorLite {
             let editor = this.el.querySelector('#editor-' + this.edUid);
             layout.style.width = !!this.widthPx ? this.widthPx.toString() + "px" : "100%";
             layout.style.height = !!this.heightPx ? this.heightPx.toString() + "px" : "100%";
-            layout.style.height = Math.max(layout.clientHeight, (this.ed.getModel().getLineCount() * 19)).toString() + "px";
+            layout.style.height = Math.max(layout.clientHeight, ((this.heightLine || this.ed.getModel().getLineCount()) * 19)).toString() + "px";
             editor.style.height = !!this.heightLine ? (19 * this.heightLine).toString() + "px" : !!this.heightPx ? this.heightPx.toString() + "px" : "100%";
             this.ed.layout();
             this.warpViewEditorLoaded.emit();

@@ -7,11 +7,18 @@ This [web components](https://fr.wikipedia.org/wiki/Composants_web) embed a Warp
 
 ## Usage
 
+    npm i @senx/warpview-editor-lite --save
+    
+    yarn add @senx/warpview-editor-lite
+    
+    bower install senx-warpview-editor-lite --save
+
+
 ```html
 <html>
 <head>
   <title>Test</title>
-  <script src="warp-view-editor-lite.js"></script>
+  <script src="https://unpkg.com/@senx/warpview-editor-lite@x.x.x/dist/warpview-editor-lite.js"></script>
 </head>
 <body>
   <warp-view-editor-lite height-line=18 width-px=600 theme="dark">
